@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <form name="join" method="post" action="/member/join">
+        <input type="text" name="mid"><button type="button" class="checkBtn">중복확인</button>
+        <input type="password" name="mid">
+    </form>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script>
+        document.querySelector(".checkBtn").addEventListener("click", async function(e){
+            e.stopPropagation()
+            e.preventDefault()
+            await axios.get("http://localhost:8080/member/check","apiuser1").then()
+        },false)
+    </script>
+</body>
+
+</html>
